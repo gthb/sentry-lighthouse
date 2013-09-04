@@ -1,0 +1,2 @@
+sentry>=6.0.0
+lighthouse>=0.1

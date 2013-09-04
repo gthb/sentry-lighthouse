@@ -1,0 +1,15 @@
+{% load i18n crispy_forms_filters %}
+
+<form class="form" action="" method="post" id="lighthouse_issue_form">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">{% trans "Save Changes" %}</button>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#id_lighthouse-default_project").select2({"width": "220px"});
+    });
+</script>

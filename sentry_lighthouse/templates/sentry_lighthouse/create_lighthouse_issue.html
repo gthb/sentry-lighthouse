@@ -1,0 +1,33 @@
+{% extends "sentry/groups/details.html" %}
+
+{% load i18n crispy_forms_filters %}
+
+{% block title %}{{ title }} | {{ block.super }}{% endblock %}
+
+{% block inner %}
+<div class="span12">
+    <div class="page-header">
+        <h3>{{ title }}</h3>
+    </div>
+    <p>This will create an issue in Lighthouse and create a link within the Sentry Event.</p>
+    <br />
+    <form class="form-horizontal" action="" method="post" id="lighthouse_issue_form">
+        <input type="hidden" value="0" id="changing_issuetype" name="changing_issuetype" />
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">{% trans "Create Lighthouse Issue" %}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block meta %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // bind regular selects and multiselects to use select2
+            $("#lighthouse_issue_form").find("select").select2({"width": "460px"});
+        });
+    </script>
+{% endblock %}
