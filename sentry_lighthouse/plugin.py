@@ -65,3 +65,7 @@ class LighthousePlugin(IssuePlugin):
         instance = self.get_option('instance_url', group.project)
         project_id, ticket_id = issue_id.split('/')
         return "%s/projects/%s/tickets/%s" % (instance, project_id, ticket_id)
+
+    def get_issue_label(self, group, issue_id, **kwargs):
+        project_id, ticket_id = issue_id.split('/')
+        return "Lighthouse ticket #%s" % ticket_id

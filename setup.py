@@ -12,7 +12,7 @@ f.close()
 
 setup(
     name='sentry_lighthouse',
-    version='0.1.0',
+    version='0.1.1',
     author='Gunnlaugur Thor Briem',
     author_email='gunnlaugur@gmail.com',
     url='http://github.com/gthb/sentry-lighthouse',
