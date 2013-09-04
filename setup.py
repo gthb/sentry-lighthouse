@@ -11,7 +11,7 @@ readme = f.read()
 f.close()
 
 setup(
-    name='sentry-lighthouse',
+    name='sentry_lighthouse',
     version='0.1.0',
     author='Gunnlaugur Thor Briem',
     author_email='gunnlaugur@gmail.com',

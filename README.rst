@@ -10,11 +10,12 @@ complete sentry-jira_.
 Installation
 ------------
 
-Install the package via ``pip``:
+Install via pip (from repos because these packages are not yet in PyPI):
 
 ::
 
-    pip install sentry-lighthouse
+    pip install -e git+https://github.com/gthb/python-lighthouse-api#egg=lighthouse
+    pip install -e git+https://github.com/gthb/sentry-lighthouse#egg=sentry_lighthouse
 
 
 Configuration
